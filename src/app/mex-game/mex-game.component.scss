@@ -1,0 +1,52 @@
+.wrapper-blackjack {
+
+  #table {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  .circle-timer {
+    position: absolute;
+    left: 536px;
+    top: 10px;
+    width: 72px;
+    height: 72px;
+    display: table;
+
+    svg {
+      position: absolute;
+    }
+    #counter {
+      position: relative;
+      left: 0;
+      top: 0;
+      font-size: 20px;
+      color: rgb(255, 255, 255);
+      width: 72px;
+      height: 72px;
+      display: table-cell;
+      font-family: Arial;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+  .tiktok-anim {
+    animation: tiktok 0.5s alternate infinite;
+  }
+  @keyframes tiktok {
+    0% {
+      transform-origin: 36px 36px;
+      transform: scale(1, 1);
+    }
+    100% {
+      transform-origin: 36px 36px;
+      transform: scale(1.25, 1.25);
+    }
+  }
+  .normal-state {
+    transform-origin: 36px 36px;
+    transform: scale(1, 1);
+    transition: transform 300ms;
+  }
+}

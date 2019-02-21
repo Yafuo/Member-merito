@@ -1,0 +1,18 @@
+<div class="wrapper-blackjack">
+  <img id="table" [src]=tableUrl />
+  <div class="circle-timer">
+    <svg viewBox="0 0 72 72">
+      <defs>
+        <linearGradient id="TimerGradient">
+          <stop offset="0%" stop-color="#ff0100"></stop>
+          <stop offset="100%" stop-color="#fcd648"></stop>
+        </linearGradient>
+      </defs>
+      <path transform="translate(36, 36)" fill="url(#TimerGradient)" d="M 0 0 v -36 A 36 36 1 0 1 20.130944524946887 -29.845352611981497 z"></path>
+      <circle id="circle-graphic" [ngClass]=" counter < 5 ? 'tiktok-anim' : 'normal-state'" cx="36" cy="36" r="27" [attr.fill]="!isHide ? '#1A2D3B' : 'transparent'"></circle>
+    </svg>
+    <div id="counter">{{counter}}</div>
+  </div>
+  <div class="block-blackjack">
+  </div>
+</div>
