@@ -35,6 +35,10 @@
       </div>
     </div>
     <div class="dealerHandContainerView">
+      <div class="chipBtn" *ngFor="let chipButton of chipButtons">
+        <img class="imageView" [src]=getChipButtonImg(chipButton.index)/>
+        <div class="labelView">{{chipButton.value}}</div>
+      </div>
       <div class="cardFanView">
         <div class="cardView" *ngFor="let dealerCard of dealer.properties; let i = index">
           <img class="imageView" [src]=cardsUrl[i] />
@@ -42,18 +46,6 @@
       </div>
       <div class="markerView">
         <div class="labelView">9</div>
-      </div>
-      <!--<div class="chipButton" *ngFor="let chipButton of chipButtons">-->
-        <!--<img class="imageView" [src]=getChipButtonImg(chipButton.index) />-->
-        <!--<div class="labelView">{{chipButton.value}}</div>-->
-      <!--</div>-->
-      <div class="chipButton">
-        <img class="imageView" [src]=getChipButtonImg(1) />
-        <div class="labelView">4</div>
-      </div>
-      <div class="chipButton">
-        <img class="imageView" [src]=getChipButtonImg(2) />
-        <div class="labelView">8</div>
       </div>
       <div class="labelView">Dealer</div>
     </div>
